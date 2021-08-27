@@ -1,39 +1,123 @@
-.App {
-  text-align: center;
+.ServiceList, .ServiceAdd {
+  width: 400px;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ServiceList button, .ServiceAdd button {
+  height: 35px;
+  border: 0px;
+  background-color: #db3948;
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.ServiceList button:hover {
+  background-color: #ad1d2c;
 }
 
-.App-header {
-  min-height: 100vh;
+.ServiceList__add {
+  margin-bottom: 30px;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.ServiceList__list {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ServiceList__item {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  border: 1px solid silver;
+  margin-top: -1px;
+  padding: 10px 15px;
+}
+
+.ServiceList__controls {
+  display: flex;
+}
+
+.ServiceList__controls button {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.ServiceAdd__label {
+  margin-bottom: 5px;
+}
+
+.ServiceAdd__input {
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.ServiceAdd__controls {
+  display: flex;
+}
+
+.ServiceAdd__controls button {
+  padding: 10px 15px;
+  margin: 10px 10px 0px 0px;
+}
+
+.ServiceList__spinner {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.ServiceList__spinner img {
+  width: 40px;
+  animation: spinner 1s infinite;
 }
 
-@keyframes App-logo-float {
+.ServiceList__button-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: #e77e88;
+}
+
+.ServiceAdd__button-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 35px;
+  margin: 10px 10px 0px 0px;
+  background-color: #e77e88;
+}
+
+.ServiceAdd__button-spinner img, .ServiceList__button-spinner img {
+  height: 20px;
+  animation: spinner 1s infinite;
+}
+
+@keyframes spinner {
   0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translateY(0px);
+    transform: rotate(360deg);
   }
+}
+
+.ServiceList__error, .ServiceAdd__error {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid #f4c6cb;
+  background-color: #f8d7da;
+  color: #711e25;
 }
